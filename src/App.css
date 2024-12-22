@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgb(255, 255, 255);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image: url(https://wholesale-bagels.newyorkerbagels.com/wp-content/uploads/2024/11/everything-bagel.webp);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+html,
+body {
+  width: 100%;
+  height: auto;
+}
+
+.page {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.header {
+  grid-row-start: 1;
+  background-color: rgba(68, 68, 68, 0.9);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  padding-left: 1.2rem;
+}
+
+nav {
+  padding-right: 6rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner {
+  grid-row-start: 2;
+  background-color: rgba(68, 68, 68, 0.9);
+  padding: 1.2rem;
+  width: 24rem;
+  height: 24rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.6rem;
+  align-items: center;
+  justify-items: center;
+  padding: 3.6rem;
+  color: #1a1a1a;
+}
+
+img {
+  max-width: 12rem;
+  max-height: 12rem;
+  object-fit: cover;
+}
+
+.product {
+  background-color: white;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  align-items: center;
+  justify-items: center;
+  min-width: 18rem;
+  max-width: 18rem;
+  min-height: 24rem;
+  max-height: 24rem;
+  padding: 0.6rem;
+  border-radius: 50px;
+}
+
+footer {
+  grid-row-start: 3;
+  background-color: rgba(68, 68, 68, 0.9);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.2rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 6em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+a,
+.cart {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover,
+.cart:hover {
+  color: #535bf2;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: aliceblue;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.btn {
+  background-color: white;
+  color: #1a1a1a;
+  border: 1px solid ;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  color: #1a1a1a;
+  list-style-type: none;
+  margin-top: 1.2rem;
+  right: 5px;
+  border: 1px solid grey;
+  width: 18rem;
+}
+
+.cartItems {
+  max-width: 6rem;
+  max-height: 6rem;
+
+}
+
+.itemsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  text-align: end;
+  padding: 1.2rem;
+}
+
+.menu > li {
+  margin: 0;
+
+  background-color: white;
+}
+
+.totals {
+  background-color: white;
+  text-align: end;
+  padding: 1.2rem;
+}
+
+hr {
+  width: 100%;
+}
+
+.deleteBtn {
+  width: 1.2rem;
+  background-color: white;
+  color: red;
+  padding-left: 0;
+}
+
+.deleteBtn:hover {
+  border-color: white;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+@media (min-width: 600px) {
+  .content { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1000px) {
+  .content { grid-template-columns: repeat(3, 1fr); }
+}
